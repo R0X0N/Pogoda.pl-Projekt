@@ -139,8 +139,11 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
         errorContent.style.display = "flex";
         console.log("Wystąpił błąd podczas pobierania prognozy pogody!");
     });
-    loader.style.display = "none";
-    content.style.display = "block";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+        content.style.display = "block";
+    }, 200);
 
 }
 
