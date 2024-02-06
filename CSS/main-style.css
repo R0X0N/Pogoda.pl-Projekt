@@ -259,10 +259,12 @@ div.container::-webkit-scrollbar {
         flex-direction: column;
         width: 100%;
         align-items: center;
+
     }
 
     .current-weather {
         padding-right: 100%;
+        margin-top: 10px;
     }
 
     .separator3, .card-text {
@@ -271,6 +273,8 @@ div.container::-webkit-scrollbar {
 
     .pogoda_dzis {
         width: 100%;
+        margin-top: 10px;
+
     }
 
     .card {
