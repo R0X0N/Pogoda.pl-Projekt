@@ -97,7 +97,7 @@
 
 
 .card-text {
-    width: 1000px;
+    width: 100%;
     margin-top: -5px;
     margin-left: 50px;
 }
@@ -254,30 +254,28 @@ div.container::-webkit-scrollbar {
 
 
 @media (max-width: 750px) {
-    .main{
-        display: flex;
-        flex-direction: column;
-
-    }
-    .container{
-        display: flex;
+    .container {
+        display: flow;
         flex-direction: column;
         width: 100%;
-
+        align-items: center;
     }
 
-    .current-weather{
-        width: 1000px;
+    .current-weather {
+        padding-right: 100%;
     }
 
-    .pogoda_dzis{
+    .separator3, .card-text {
+        width: 600px;
+    }
+
+    .pogoda_dzis {
         width: 100%;
     }
 
-    .card{
+    .card {
         font-size: 80px;
     }
-
 }
 
 
@@ -319,7 +317,7 @@ div.container::-webkit-scrollbar {
 
 @media (max-width: 1920px) {
 
-    main{
+    main {
         flex-direction: column;
     }
 }

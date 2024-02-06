@@ -284,13 +284,17 @@ main {
     }
     .card{
         width: 93%;
-
+        font-size: 100em;
     }
     .test{
         height: 100px;
     }
     .content{
         height: 1000px;
+    }
+
+    .pogoda_dzis{
+        font-size: 1.5em;
     }
 
 }
