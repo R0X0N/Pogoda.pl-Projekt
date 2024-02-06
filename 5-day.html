@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pogoda.pl</title>
+
+    <link href="CSS/gui-style.css" rel="stylesheet">
+    <link href="CSS/5-day.css" rel="stylesheet">
+
+
+    <link href="Graphics/ikona.png" rel="shortcut icon" type="image/png">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <script defer src="Script/nav.js"></script>
+    <script defer src="Script/api-5d.js"></script>
+</head>
+
+<header class="header">
+
+    <div class="l-str">
+        <button class="menu-btn" onclick="openNav()" title="Menu">&#9776;</button>
+        <a href="main.html">
+            <img alt="logo"
+                 class="logo"
+                 height="50"
+                 src="Graphics/logo.png"
+                 title="Pogoda.pl"
+                 width="150">
+        </a>
+
+    </div>
+
+    <div class="srodek">
+        <input class="city-input" placeholder="Wpisz nazwę miejscowości" type="text">
+        <button class="search-btn m-icon" title="Szukaj">Search</button>
+    </div>
+
+    <div class="p-str">
+        <button class="location-btn m-icon" title="Pobierz lokalizację">my_location
+        </button>
+    </div>
+
+</header>
+
+<body>
+<div class="sidenav" id="mySidenav">
+    <div class="nav-head">
+        <div class="close-btn m-icon" onclick="closeNav()">&#9776;</div>
+        <a href="main.html">
+            <img alt="logo"
+                 class="logo-nav"
+                 height="50"
+                 src="Graphics/logo.png"
+                 title="Pogoda.pl"
+                 width="150">
+        </a>
+
+        <p class="separator"></p>
+
+        <div class="nav-main">
+            <a class="link" href="main.html" title="Prognoza pogody na dziś">Prognoza na dziś</a>
+            <a class="active link" href="5-day.html" title="Prognoza na najbliższe dni:">Prognoza na najbliższe dni:</a>
+        </div>
+    </div>
+
+    <div class="nav-foot">
+        <p class="separator2"></p>
+        Powered By:<br>
+        <a href="https://openweathermap.org/api" rel="noopener" target="_blank"
+           title="Free OpenWeather Api">
+            <img alt="OpenWeather"
+                 height="30"
+                 loading="lazy"
+                 src="Graphics/openweather.png"
+                 width="150"></a>
+    </div>
+</div>
+
+<!-- ERROR -->
+<section class="error-content" data-error-content>
+    <h2 class="err_nag">404</h2>
+    <p class="err_con">Page not found!</p>
+</section>
+
+</body>
+
+
+<main id="main">
+    <div class="loader " id="loader"></div>
+    <div class="hidden animate-bottom container" id="content">
+
+
+        <div class="pogoda pogoda_dzis">
+            Pogoda na najbliższe dni:
+        </div>
+
+        <div class="content">
+            <div class="test">
+                <div class="t1">
+                    <a class="arrow-left m-icon">chevron_left </a>
+                </div>
+
+                <div class="horizontal-scroll-wrapper squares">
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                    <div class="card">
+                        <h3 class="tekst">Godz</h3>
+                        <img
+                                alt="Weather description"
+                                class="card-img-dz"
+                                height="150px"
+                                src="https://openweathermap.org/img/wn/10d@4x.png"
+                                width="150px"
+                        />
+                        <h6>Temperatura: </h6>
+                        <h6>Tem. Odcz: </h6>
+                        <h6>Ciśnienie: </h6>
+                        <h6>Wilgotność: </h6>
+                        <h6>Prd. wiatru: </h6>
+                        <h6>Opad atmos.: </h6>
+                    </div>
+                </div>
+                <div class="t1">
+                    <a class="arrow-right m-icon">chevron_right</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+</html>
