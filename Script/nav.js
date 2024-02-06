@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         hideLoader();
         showContent();
-    }, 400); // Replace with your actual data loading logic and time
+    }, 400);
 
     function hideLoader() {
 
@@ -73,6 +73,5 @@ function closeNav() {
 
     const font = document.querySelector(".pogoda_dzis");
     font.classList.remove('act');
-
 
 }

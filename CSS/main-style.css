@@ -39,6 +39,7 @@
     display: flex;
     padding: 1.5%;
     gap: 20px;
+
 }
 
 .current-weather {
@@ -252,6 +253,34 @@ div.container::-webkit-scrollbar {
 }
 
 
+@media (max-width: 750px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .current-weather{
+        width: 1000px;
+    }
+
+    .pogoda_dzis{
+        width: 100%;
+    }
+
+    .card{
+        font-size: 80px;
+    }
+
+}
+
+
 /*fhd*/
 @media (max-width: 1200px) {
 
@@ -290,7 +319,7 @@ div.container::-webkit-scrollbar {
 
 @media (max-width: 1920px) {
 
-    .card {
-        font-size: 10px;
+    main{
+        flex-direction: column;
     }
 }

@@ -455,3 +455,12 @@ footer {
     height: 100px;
     background-color: transparent;
 }
+
+@media (max-width: 750px) {
+
+    .logo{
+        display: none;
+
+    }
+
+}

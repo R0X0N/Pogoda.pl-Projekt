@@ -261,6 +261,43 @@ main {
     margin-block-start: 20px;
 }
 
+@media (max-width: 750px) {
+
+    .horizontal-scroll-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 75px;
+        margin-left: 0px;
+        overflow-y: scroll;
+        width: 100%;
+    }
+    .pogoda_dzis{
+        display: flex;
+    }
+    .arrow-left, .arrow-right{
+        display: none;
+    }
+    .main{
+        height: 100%;
+        overflow-y: hidden;
+
+    }
+    .card{
+        width: 93%;
+
+    }
+    .test{
+        height: 100px;
+    }
+    .content{
+        height: 1000px;
+    }
+
+}
+
+
+
+
 
 @media (max-width: 1920px) {
     .card {
@@ -268,13 +305,3 @@ main {
     }
 }
 
-@media (max-width: 1000px) {
-    .card {
-        font-size: 1em;
-        height: 350px;
-    }
-
-    .content {
-        height: 500px;
-    }
-}

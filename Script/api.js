@@ -8,6 +8,8 @@ const errorContent = document.querySelector("[data-error-content]");
 const error = document.querySelector("main");
 const loader = document.getElementById("loader");
 const content = document.getElementById("content");
+const body = document.getElementById("body");
+
 
 
 const API_KEY = "abdc6aa984d531707faba27e8b0a44e1"; // API key for OpenWeatherMap API
@@ -76,6 +78,8 @@ const getUserCoordinates = () => {
 const getWeatherDetails = (cityName, latitude, longitude) => {
     loader.style.display = "none";
 
+
+
     const urla = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&lang=pl&units=metric`;
 
     fetch(urla)
@@ -122,9 +126,10 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
     });
 
     setTimeout(() => {
+        loader.style.display = "none";
         content.style.display = "block";
-
     }, 200);
+
 
 }
 
